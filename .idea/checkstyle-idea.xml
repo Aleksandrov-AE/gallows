@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CheckStyle-IDEA" serialisationVersion="2">
+    <checkstyleVersion>10.10.0</checkstyleVersion>
+    <scanScope>JavaOnlyWithTests</scanScope>
+    <copyLibs>true</copyLibs>
+    <scanBeforeCheckin>true</scanBeforeCheckin>
+    <option name="thirdPartyClasspath" />
+    <option name="activeLocationIds">
+      <option value="0759eaac-9b2d-48ef-a3bd-af36f4704abd" />
+    </option>
+    <option name="locations">
+      <list>
+        <ConfigurationLocation id="bundled-sun-checks" type="BUNDLED" scope="All" description="Sun Checks">(bundled)</ConfigurationLocation>
+        <ConfigurationLocation id="bundled-google-checks" type="BUNDLED" scope="All" description="Google Checks">(bundled)</ConfigurationLocation>
+        <ConfigurationLocation id="0759eaac-9b2d-48ef-a3bd-af36f4704abd" type="LOCAL_FILE" scope="All" description="c1">$PROJECT_DIR$/../job4j_tracker/checkstyle.xml</ConfigurationLocation>
+      </list>
+    </option>
+  </component>
+</project>
