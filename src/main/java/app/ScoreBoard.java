@@ -10,8 +10,6 @@ import java.util.Random;
 
 public class ScoreBoard {
     private static final int MAX_MISTAKE = 7;
-    private final String dictinoryPath = "nouns.txt";
-    private final List<String> dictinory = new ArrayList<>();
     private char[] searchWord;
     private char[] table;
 
@@ -22,6 +20,7 @@ public class ScoreBoard {
 
         try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/App/nouns.txt"))) {
             String line;
+            List<String> dictinory = new ArrayList<>();
             while ((line = br.readLine()) != null) {
                 if (line.length() <= MAX_MISTAKE) {
                     dictinory.add(line);
@@ -57,8 +56,8 @@ public class ScoreBoard {
 
     public void printScoreBoard() {
         System.out.print("SearcheWord:");
-        for (int i = 0; i < table.length; i++) {
-            System.out.print(table[i]);
+        for (char c : table) {
+            System.out.print(c);
         }
         System.out.println("\nОшибки: " + countMistake);
     }
