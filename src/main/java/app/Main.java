@@ -17,6 +17,7 @@ public class Main {
             System.out.println("Если хотите начать заново нажмите Y:");
             String s = scanner.next();
             if (!Objects.equals(s.toLowerCase(), "y")) {
+                scanner.close();
                 return;
             }
         } while (true);
@@ -24,7 +25,6 @@ public class Main {
 
     public static void startRound() {
         ScoreBoard scoreBoard = new ScoreBoard();
-        //getWord()/create ScoreBoard
         Hangman hagman = new Hangman();
         hagman.printhangman();
         gameLoop(scoreBoard, hagman);
@@ -32,25 +32,19 @@ public class Main {
 
     public static void gameLoop(ScoreBoard scoreBoard, Hangman hagman) {
         do {
-
             scoreBoard.printScoreBoard();
             char ch = inputLetter();
             if (!scoreBoard.checkLetter(ch)) {
                 hagman.changeState();
             }
             hagman.printhangman();
-            String state = scoreBoard.checkTable();
+            String state = scoreBoard.checkGameState();
             if (!Objects.equals(state, NOT_FINISH)) {
                 System.out.println("******" + state + "******");
                 System.out.println("========================");
                 return;
             }
         } while (true);
-        //print scoreboard and hagman
-        //input && validate
-        //tableWordcheck изменить состояние scoreboard
-        //changeStateHagman
-        //checkgameState
     }
 
     public static char inputLetter() {

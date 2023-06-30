@@ -16,6 +16,7 @@ public class ScoreBoard {
     private char[] table;
 
     private int countMistake;
+    private int countRightLetter;
 
     public ScoreBoard() {
 
@@ -44,6 +45,7 @@ public class ScoreBoard {
                     return true;
                 }
                 table[i] = input;
+                countRightLetter++;
                 result = true;
             }
         }
@@ -61,15 +63,14 @@ public class ScoreBoard {
         System.out.println("\nОшибки: " + countMistake);
     }
 
-    public String checkTable() {
+    public String checkGameState() {
         if (countMistake < MAX_MISTAKE) {
-            for (char ch : table) {
-                if (ch == '_') {
-                    return Main.NOT_FINISH;
-                }
+            if (table.length != countRightLetter) {
+                return Main.NOT_FINISH;
+            }  else {
+                return Main.WIN;
             }
-            return Main.WIN;
         }
-       return Main.LOSS;
+        return Main.LOSS;
     }
 }
