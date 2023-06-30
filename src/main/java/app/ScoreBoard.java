@@ -13,6 +13,7 @@ public class ScoreBoard {
     private char[] searchWord;
     private char[] table;
 
+    private final List<Character> enteredLetter = new ArrayList<>();
     private int countMistake;
     private int countRightLetter;
 
@@ -37,12 +38,16 @@ public class ScoreBoard {
 
     public boolean checkLetter(char input) {
         boolean result = false;
+        boolean letterWas = enteredLetter.contains(input);
+        enteredLetter.add(input);
+        if (letterWas) {
+            System.out.println("\u001B[31mТакая буква уже вводилась\u001B[0m");
+            enteredLetter.add(input);
+            return true;
+        }
+        enteredLetter.add(input);
         for (int i = 0; i < searchWord.length; i++) {
             if (input == searchWord[i]) {
-                if (table[i] == input) {
-                    System.out.println("Такая буква уже есть");
-                    return true;
-                }
                 table[i] = input;
                 countRightLetter++;
                 result = true;
