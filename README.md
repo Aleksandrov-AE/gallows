@@ -10,17 +10,17 @@
 2. Клонируйте этот репозиторий на ваш компьютер:
    git clone https://github.com/Aleksandrov-AE/gallows.git
 3. Перейдите в директорию проекта `gallows`:
-   ```bash 
+   ~~~bash 
    cd gallows
-   ```
+   ~~~
 4. Скомпилируйте исходные файлы с помощью команды:
-    ```bash 
+    ~~~bash 
     javac Gallows.java
-   ```
+   ~~~
 5. Запустите игру с помощью команды:
-    ```bash
+    ~~~bash
    java Gallows
-   ```
+   ~~~
 
    
 ### Как играть
