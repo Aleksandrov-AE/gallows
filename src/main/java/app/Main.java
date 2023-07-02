@@ -43,6 +43,7 @@ public class Main {
             String state = scoreBoard.checkGameState();
             if (!Objects.equals(state, NOT_FINISH)) {
                 System.out.println("******" + state + "******");
+                System.out.println("Загаданное слово :" + scoreBoard.searchWord());
                 System.out.println("========================");
                 return;
             }

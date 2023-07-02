@@ -62,7 +62,7 @@ public class ScoreBoard {
     }
 
     public void printScoreBoard() {
-        System.out.print("SearcheWord:");
+        System.out.print("Слово:");
         for (char c : table) {
             System.out.print(c);
         }
@@ -78,5 +78,9 @@ public class ScoreBoard {
             }
         }
         return Main.LOSS;
+    }
+
+    public String searchWord() {
+        return new String(searchWord);
     }
 }
