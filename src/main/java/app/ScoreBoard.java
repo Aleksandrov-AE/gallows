@@ -1,8 +1,9 @@
 package app;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -10,16 +11,17 @@ import java.util.Random;
 
 public class ScoreBoard {
     private static final int MAX_MISTAKE = 7;
+    private static final char MASK = '_';
     private char[] searchWord;
     private char[] table;
 
     private final List<Character> enteredLetter = new ArrayList<>();
     private int countMistake;
     private int countRightLetter;
+    private final String path = "nouns.txt";
 
     public ScoreBoard() {
-
-        try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/App/nouns.txt"))) {
+        try (BufferedReader br = Files.newBufferedReader(Paths.get(path))) {
             String line;
             List<String> dictinory = new ArrayList<>();
             while ((line = br.readLine()) != null) {
@@ -30,7 +32,7 @@ public class ScoreBoard {
             int randomWordNUm = new Random().nextInt(dictinory.size() - 1);
             searchWord = dictinory.get(randomWordNUm).toCharArray();
             table = new char[searchWord.length];
-            Arrays.fill(table, '_');
+            Arrays.fill(table, MASK);
         } catch (IOException e) {
             e.printStackTrace();
         }

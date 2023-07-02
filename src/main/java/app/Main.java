@@ -13,10 +13,11 @@ public class Main {
 
     public static void main(String[] args) {
         do {
+            System.out.println(System.getProperty("user.dir"));
             startRound();
-            System.out.println("Если хотите начать заново нажмите Y:");
+            System.out.println("Если хотите выйти нажмите Y:");
             String s = scanner.next();
-            if (!Objects.equals(s.toLowerCase(), "y")) {
+            if (Objects.equals(s.toLowerCase(), "y")) {
                 scanner.close();
                 return;
             }
