@@ -15,9 +15,10 @@ public class Main {
         do {
             System.out.println(System.getProperty("user.dir"));
             startRound();
-            System.out.println("Если хотите выйти нажмите Y:");
+            System.out.println("1. New game");
+            System.out.println("2. Exit");
             String s = scanner.next();
-            if (Objects.equals(s.toLowerCase(), "y")) {
+            if (Objects.equals(s.toLowerCase(), "2")) {
                 scanner.close();
                 return;
             }

@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab9da931-9edb-4a70-98db-28e0bf0e969f" name="Changes" comment="Убрать ошибки при повторном вводе">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/ScoreBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/ScoreBoard.java" afterDir="false" />
-    </list>
+    <list default="true" id="ab9da931-9edb-4a70-98db-28e0bf0e969f" name="Changes" comment="Сделать так что бы открытие файл словаря было независимо от операционной системы и расположения файла" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688150467410</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Сделать так что бы открытие файл словаря было независимо от операционной системы и расположения файла">
+      <created>1688305882953</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688305882953</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -148,6 +151,7 @@
     <MESSAGE value="Убрать проверко статуса игры через графику" />
     <MESSAGE value="Убрать checkStyle problem" />
     <MESSAGE value="Убрать ошибки при повторном вводе" />
-    <option name="LAST_COMMIT_MESSAGE" value="Убрать ошибки при повторном вводе" />
+    <MESSAGE value="Сделать так что бы открытие файл словаря было независимо от операционной системы и расположения файла" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделать так что бы открытие файл словаря было независимо от операционной системы и расположения файла" />
   </component>
 </project>
