@@ -13,7 +13,6 @@ public class Main {
 
     public static void main(String[] args) {
         do {
-            System.out.println(System.getProperty("user.dir"));
             startRound();
             System.out.println("1. New game");
             System.out.println("2. Exit");
@@ -27,16 +26,16 @@ public class Main {
 
     public static void startRound() {
         ScoreBoard scoreBoard = new ScoreBoard();
-        Hangman hagman = new Hangman();
-        hagman.printhangman();
-        gameLoop(scoreBoard, hagman);
+        Hangman hangman = new Hangman();
+        hangman.printhangman();
+        gameLoop(scoreBoard, hangman);
     }
 
     public static void gameLoop(ScoreBoard scoreBoard, Hangman hagman) {
         do {
             scoreBoard.printScoreBoard();
             char ch = inputLetter();
-            if (!scoreBoard.checkLetter(ch)) {
+            if (scoreBoard.checkLetter(ch) == GuessState.NOT_GUESSED) {
                 hagman.changeState();
             }
             hagman.printhangman();
